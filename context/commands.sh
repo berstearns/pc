@@ -15,3 +15,4 @@ case $1 in
  ;;
 esac
 sudo docker build -t whisperd -f Dockerfile ./context
+sudo docker build -t whisperd -f Dockerfile ./context

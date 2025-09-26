@@ -2,7 +2,7 @@ case $1 in
  cvt) # convert
  :
  ;;
- # for f in ./*;do ffmpeg -i  -ar 16000 -ac 1 -c:a pcm_s16le .wav; done
+ # for f in ./*;do ffmpeg -i $f -ar 16000 -ac 1 -c:a pcm_s16le $f.wav; done
  seg) # segment
  :
  ;;
@@ -11,6 +11,7 @@ case $1 in
  :
  ;;
  #~/venv/bin/whisper --output_dir --language pt ./extracted contents/out000.wav
+ # /usr/local/bin/whisper --output_dir /content/extracted --language pt /contents/segments/out000.wav
  *)
  ;;
 esac
